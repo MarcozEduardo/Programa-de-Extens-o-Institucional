@@ -55,7 +55,13 @@ Está alocada em um serve Vercel. confira
 ### **🤖 Ferramentas de IA**
 | Ferramenta | Uso no Projeto |
 |------------|---------------|
-| **[Gemini (Google)](https://gemini.google.com)** | Geração de conteúdo, revisão de textos, sugestões de estrutura |
+| **[Mistral AI](https://mistral.ai)** | Geração de código, documentação e estruturação do projeto |
+| **[DeepSeek](https://deepseek.com)** | Análise de dados e sugestões de otimização |
+| **[Google IA (Gemini)](https://gemini.google.com)** | Geração de conteúdo, revisão de textos, sugestões de estrutura |
+| **[Dola](https://dola.ai)** | Auxílio em tarefas complexas de desenvolvimento |
+| **[Claude](https://claude.ai)** | Revisão de código e sugestões de melhorias |
+| **[Kimi](https://kimi.moonshot.cn)** | Tradução e adaptação de conteúdos |
+| **[Qwen](https://qwenlm.com)** | Geração de textos técnicos e acadêmicos |
 | **[GitHub Copilot](https://github.com/features/copilot)** | Auxílio na escrita de código (React, TypeScript) |
 | **[Mermaid.js](https://mermaid.js.org)** | Criação de diagramas (usado neste README) |
 
@@ -266,10 +272,10 @@ http://localhost:5173
 - **Responsividade**: Adaptação para todos os dispositivos
 
 ### **🤖 Integração com IA**
-- **Prompt Engineering**: Como criar prompts efetivos para IA
-- **Revisão de Código**: Uso de IA para melhorar qualidades de código
-- **Geração de Conteúdo**: Automação de textos acadêmicos
-- **Documentação Automática**: Criação de documentação com IA
+- **Prompt Engineering**: Como criar prompts efetivos para IA (Mistral, DeepSeek, Google IA, etc.)
+- **Revisão de Código**: Uso de IA para melhorar qualidades de código (Claude, Copilot)
+- **Geração de Conteúdo**: Automação de textos acadêmicos (Qwen, Kimi, Gemini)
+- **Documentação Automática**: Criação de documentação com IA (Mistral, Dola)
 
 ---
 
@@ -295,6 +301,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 - **Unyleya (EAD)**: Pela oportunidade de desenvolvimento acadêmico e profissional
 - **Agência Brasil, Senado e GDF**: Pelas fotos com licenças livres (CC BY)
 - **Comunidade Open Source**: Pelas tecnologias incríveis usadas neste projeto
+- **Mistral AI, DeepSeek, Google IA, Dola, Claude, Kimi, Qwen**: Pelas ferramentas de IA que tornaram este projeto possível
 - **Google (Gemini)**: Pelo suporte na geração de conteúdo e código
 - **GitHub**: Pela plataforma de versionamento e CI/CD
 
@@ -305,7 +312,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 | [Marcos Eduardo da Silva dos Reis](https://github.com/MarcozEduardo) |
 |-------------------------------------------------------------------------|
 | 👨‍💻 **Desenvolvedor Full-Stack & Orquestrador de IA** |
-| ✉️ **Email**: [marcos.eduardo.reis@outlook.com](mailto:marcos.eduardo.reis@outlook.com) |
+| ✉️ **Email**: [ia.marcos.eduardo@gmail.com](mailto:ia.marcos.eduardo@gmail.com) |
 | 🌐 **Portfólio**: [Render Nexus](https://marcozeduardo.github.io) |
 | 🔗 **LinkedIn**: [Marcos Eduardo Reis](https://www.linkedin.com/in/marcos-eduardo-reis/) |
 
