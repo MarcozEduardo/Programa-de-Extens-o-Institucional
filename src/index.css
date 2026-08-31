@@ -1,0 +1,338 @@
+@import "tailwindcss";
+
+@theme {
+  --font-arial: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "Nimbus Sans", sans-serif;
+  --font-times: "Times New Roman", Georgia, "Times", "Liberation Serif", serif;
+
+  /* ---- TEMA PADRÃO: ESCURO (Noite) ---- */
+  --color-night: #0a0d0b;
+  --color-coal: #101512;
+  --color-graphite: #1a211d;
+  --color-smoke: #2a332d;
+  --color-ash: #7d877f;
+  --color-fog: #b9c2ba;
+  --color-paper: #f2f4ee;
+  --color-bone: #e6eae1;
+
+  --color-hazard: #ef4b3f;
+  --color-ember: #f59e0b;
+  --color-rust: #b3543e;
+
+  --color-leaf: #22c074;
+  --color-pine: #0f8a52;
+  --color-mint: #8ef0c0;
+  --color-river: #3aa6e8;
+  --color-deepwater: #125e8a;
+  --color-sky: #bde3fa;
+
+  /* tintas de texto que acompanham o tema */
+  --color-amberink: #ffd9a0;
+  --color-redink: #ffb3ac;
+  --color-rustink: #d98a7f;
+
+  /* fixos: texto sobre superfícies coloridas (nunca invertem) */
+  --color-ink: #08110c;
+  --color-lite: #f4f7f1;
+
+  --ease-swift: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-slide: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+/* superfícies/gradientes controlados por tema */
+:root {
+  --grid-line: rgba(242, 244, 238, 0.028);
+  --dot-line: rgba(242, 244, 238, 0.055);
+  --rule-line: rgba(242, 244, 238, 0.22);
+  --slide-warm: #150c0b;
+  --slide-cool: #07130e;
+  --page-wash: radial-gradient(circle at 15% 0%, rgba(34, 192, 116, 0.05), transparent 60%);
+  --grain-op: 0.5;
+  --img-shade: 0.92;
+}
+
+/* ============ TEMA CLARO (Papel) ============ */
+[data-theme="claro"] {
+  --color-night: #eef1ea;
+  --color-coal: #ffffff;
+  --color-graphite: #f7f9f3;
+  --color-smoke: #dde3d9;
+  --color-ash: #5e6a61;
+  --color-fog: #39433c;
+  --color-paper: #0e1310;
+  --color-bone: #1a211b;
+
+  --color-hazard: #c4392c;
+  --color-ember: #b06c07;
+  --color-rust: #9c4632;
+
+  --color-leaf: #159c5e;
+  --color-pine: #0c7245;
+  --color-mint: #0a6b41;
+  --color-river: #1c74ad;
+  --color-deepwater: #0d4f74;
+  --color-sky: #145f8c;
+
+  --color-amberink: #8a5406;
+  --color-redink: #9e2b20;
+  --color-rustink: #8c4232;
+
+  --grid-line: rgba(16, 24, 18, 0.045);
+  --dot-line: rgba(16, 24, 18, 0.07);
+  --rule-line: rgba(16, 24, 18, 0.18);
+  --slide-warm: #f7ece6;
+  --slide-cool: #e6f3ea;
+  --page-wash: radial-gradient(circle at 15% 0%, rgba(21, 156, 94, 0.07), transparent 60%);
+  --grain-op: 0;
+  --img-shade: 1;
+}
+
+/* ============ TEMA AURORA (Claro com gradiente) ============ */
+[data-theme="aurora"] {
+  --color-night: #eaf2f4;
+  --color-coal: #ffffff;
+  --color-graphite: #f4faf8;
+  --color-smoke: #d6e4e6;
+  --color-ash: #566a6c;
+  --color-fog: #2f4448;
+  --color-paper: #08171a;
+  --color-bone: #10262a;
+
+  --color-hazard: #c03a33;
+  --color-ember: #a96c10;
+  --color-rust: #94493a;
+
+  --color-leaf: #0fa06d;
+  --color-pine: #08745a;
+  --color-mint: #076b52;
+  --color-river: #1272ad;
+  --color-deepwater: #0a5075;
+  --color-sky: #0f5d8a;
+
+  --color-amberink: #855108;
+  --color-redink: #97281f;
+  --color-rustink: #874336;
+
+  --grid-line: rgba(8, 40, 48, 0.05);
+  --dot-line: rgba(8, 40, 48, 0.07);
+  --rule-line: rgba(8, 40, 48, 0.18);
+  --slide-warm: #fdf0e6;
+  --slide-cool: #dff2f4;
+  --page-wash: linear-gradient(135deg, rgba(15, 160, 109, 0.14) 0%, transparent 42%),
+    linear-gradient(215deg, rgba(18, 114, 173, 0.16) 0%, transparent 46%),
+    radial-gradient(circle at 82% 8%, rgba(140, 220, 200, 0.24), transparent 55%);
+  --grain-op: 0;
+  --img-shade: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-night);
+  color: var(--color-paper);
+  font-family: var(--font-arial);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--color-leaf);
+  color: var(--color-night);
+}
+
+/* ---------- ABNT-inspired details ---------- */
+
+.abnt-body {
+  line-height: 1.5; /* espaçamento 1,5 */
+  letter-spacing: 0.005em;
+}
+
+.font-times {
+  font-family: var(--font-times);
+}
+
+/* Régua de margem: referência visual à NBR 14724 (3 cm esquerda) */
+.margin-rule {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--rule-line) 0 1px,
+    transparent 1px 22px
+  );
+}
+
+/* Papel quadriculado sutil para slides de conteúdo */
+.paper-grid {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Textura de grão (some nos temas claros) */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--grain-op);
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E");
+}
+
+.halftone {
+  background-image: radial-gradient(var(--dot-line) 1px, transparent 1.4px);
+  background-size: 14px 14px;
+}
+
+/* banho de cor da página conforme o tema (fica atrás do conteúdo) */
+.page-wash {
+  background-image: var(--page-wash);
+}
+
+/* fundo dos slides de conclusão: gradiente problema → solução por tema */
+.slide-arc {
+  background-image: linear-gradient(
+    135deg,
+    var(--slide-warm) 0%,
+    var(--color-night) 46%,
+    var(--slide-cool) 100%
+  );
+}
+
+/* ---------- transições e micro-interações ---------- */
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-leaf);
+  outline-offset: 3px;
+}
+
+.chrome-btn {
+  transition:
+    background 0.25s var(--ease-swift),
+    color 0.25s var(--ease-swift),
+    border-color 0.25s var(--ease-swift),
+    transform 0.25s var(--ease-swift);
+}
+.chrome-btn:hover {
+  transform: translateY(-1px);
+}
+.chrome-btn:active {
+  transform: translateY(0px) scale(0.97);
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    r: 3;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.cursor-blink {
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+
+.link-raw {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--color-river) 55%, transparent);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.link-raw:hover {
+  color: var(--color-sky);
+  text-decoration-color: var(--color-sky);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-night);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-smoke);
+  border-radius: 99px;
+  border: 2px solid var(--color-night);
+}
+
+/* ---------- Impressão / exportação A4 paisagem ---------- */
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    overflow: visible !important;
+    height: auto !important;
+    background: var(--color-night) !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-sheet {
+    position: static !important;
+    overflow: visible !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+  .print-stack {
+    display: block !important;
+    padding: 0 !important;
+  }
+  .print-slide {
+    position: relative !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    aspect-ratio: auto !important;
+    page-break-after: always;
+    break-inside: avoid;
+  }
+  .print-slide:last-child {
+    page-break-after: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+}
