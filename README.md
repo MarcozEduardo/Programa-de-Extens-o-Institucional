@@ -25,7 +25,8 @@ Este é um **slide interativo online** desenvolvido como parte do **Programa de 
 
 ## **🎬 Demo ao Vivo**
 
-> **▶ [Acesse a Apresentação Interativa](https://marcozeduardo.github.io/Programa-de-Extens-o-Institucional/)**
+> **▶ [Acesse a Apresentação Interativa]([https://marcozeduardo.github.io/Programa-de-Extens-o-Institucional/](https://programa-de-extens-o-institucional.vercel.app/)**
+Está alocada em um serve Vercel. confira
 
 ✅ **Funcionalidades:**
 - 📤 Navegação por slides com **animações suaves** (Framer Motion)
